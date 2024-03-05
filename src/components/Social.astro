@@ -1,0 +1,12 @@
+---
+const { platform, username, icon } = Astro.props;
+---
+<a href={`https://www.${platform}.com/${username}`} target="_blank" rel="noopener noreferrer" class="flex items-center gap-2">
+    <template {icon}>
+      <img src='/img/instagram.png' alt="Instagram" class="" hidden={icon !== 'instagram'} />
+      <img src="/img/wsp.png" alt="WhatsApp" class="h-6 w-6" hidden={icon !== 'wsp'} />
+      <img src="/img/mail.png" alt="Correo Electrónico" class="h-6 w-6" hidden={icon !== 'mail'} />
+    </template>
+    <span class="text-lg">{platform}</span>
+  </a>
+  

@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import History from '../components/History.astro';
+import Orchestration from '../components/Orchestration.astro';
+import Teachers from '../components/Teachers.astro';
+import News from '../components/News.astro';
+---
+
+<Layout title="osfplb">
+	<main>
+		<Hero />
+		<div class="container">
+			<History />
+			<Orchestration />
+			<Teachers />
+			<News />
+		  </div>
+	</main>
+</Layout>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style is:global>
+	html, body{
+		background: rgb(2,0,36);
+		background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,41,107,1) 35%, rgba(0,212,255,1) 100%);
+		font-family: "Libre Baskerville", 'Times New Roman', Times, serif;
+	}
+</style>
+

@@ -1,0 +1,76 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #13151a;
+		background-size: 224px;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+	main{
+		background: rgb(2,0,36);
+		background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,41,107,1) 35%, rgba(0,212,255,1) 100%);
+	}
+	.button{
+		background-color: rgb(43, 88, 128);
+		padding: 1rem;
+		border-radius: 15px;
+		color: rgb(204,219,241);
+		transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, padding 0.3s ease-in-out, color 0.3s ease-in-out;
+	}
+	.button:hover{
+		border: 2px solid rgb(183, 215, 243) ;
+		background-color: rgba(0,41,107,1);
+		padding: 1.5rem;
+		border-radius: 15px;
+		color: rgb(210,168,7);
+		transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, padding 0.3s ease-in-out, color 0.3s ease-in-out 150ms;
+	}
+</style>

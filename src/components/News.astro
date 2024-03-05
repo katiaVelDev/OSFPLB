@@ -1,0 +1,20 @@
+---
+const { src = '/img/noticias.png' } = Astro.props
+---
+
+
+<section class="my-12">
+    <div class="container">
+      <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
+        <div class="flex flex-col items-center gap-8 ">
+          <h3 class="text-center text-6xl md:text-left lg:text-8xl text-pageText ml-4 text-balance">
+            Noticias
+          </h3>
+          <div class="flex items-center text-pageText text-center">
+            <span>Si quieres saber sobre nuestras presentaciones y noticias mas importantes, presiona <a href="/" class="text-pageText transition ease-in-out  hover:-translate-y-1 hover:scale-110 hover:underline hover:font-bold hover:text-hoverText ">aquí</a>.</span>
+          </div>
+        </div>
+        <img class="min-w-full" src={src} alt="orquestacion de la orquesta" /> 
+      </div>
+    </div>
+  </section>

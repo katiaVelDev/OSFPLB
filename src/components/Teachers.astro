@@ -1,0 +1,20 @@
+---
+const { src = '/img/profesores.png' } = Astro.props
+---
+
+<section class="my-12">
+    <div class="container">
+      <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
+        <img class="min-w-full" src={src} alt="historia de la orquesta" />
+        <div class="flex flex-col items-center gap-8 ">
+          <h3 class="text-center text-6xl md:text-left lg:text-8xl text-pageText ml-4 text-balance">
+            Profesores
+          </h3>
+          <div class="flex items-center text-pageText text-center">
+            <span>Si quieres conocer quienes inician a nuestros jóvenes en su camino en la música, presiona <a href="/" class="text-pageText transition ease-in-out  hover:-translate-y-1 hover:scale-110 hover:underline hover:font-bold hover:text-hoverText ">aquí</a>.</span>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
